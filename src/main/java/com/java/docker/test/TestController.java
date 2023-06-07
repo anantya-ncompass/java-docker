@@ -12,6 +12,6 @@ public class TestController {
 
     @GetMapping()
     public String getUser() {
-        return "hello";
+        return "hello world";
     }
 }
