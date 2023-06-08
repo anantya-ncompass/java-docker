@@ -1,1 +1,11 @@
-
+version: 0.0
+os: linux
+files:
+  - source: /index.js
+hooks:
+  BeforeInstall:
+    - location: /stop.sh
+      runas: ec2-user
+  AfterInstall:
+    - location: /start.sh
+      runas: ec2-user
