@@ -1,7 +1,7 @@
 version: 0.0
 os: linux
 files:
-  - source: /index.js
+  - source: /src/main/java/com/java/docker/test/App.java
 hooks:
   BeforeInstall:
     - location: /stop.sh
