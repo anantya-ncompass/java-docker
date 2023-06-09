@@ -1,11 +1,12 @@
 version: 0.0
 os: linux
 files:
-  - source: /src/main/java/com/java/docker/test/App.java
+  - source: ./index.js
+    destination: /home/ec2-user
 hooks:
   BeforeInstall:
-    - location: /stop.sh
-      runas: ec2-user
+    - location: ./start.sh
+      runas: root
   AfterInstall:
-    - location: /start.sh
-      runas: ec2-user
+    - location: ./stop.sh
+      runas: root
