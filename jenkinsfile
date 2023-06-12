@@ -64,7 +64,7 @@ pipeline {
                         --task-definition ${TASK_DEFN_FAMILY} \
                         --desired-count 2 \
                         --launch-type EC2 \
-                        --network-configuration "bridgeConfiguration={subnets=[subnet-b65e2aba], securityGroups=[sg-05e1fcd9d97afe04e]}" \
+                        --network-configuration "awsvpcConfiguration={subnets=[subnet-b65e2aba], securityGroups=[sg-05e1fcd9d97afe04e]}" \
                         --region us-east-1
                     '''
                 }
