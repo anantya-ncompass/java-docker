@@ -19,6 +19,9 @@
   "requiresCompatibilities": [
     "EC2"
   ],
+  "deploymentController": {
+    "type": "CODE_DEPLOY"
+  }
   "cpu": "256",
   "memory": "512"
 }
