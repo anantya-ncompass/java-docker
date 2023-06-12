@@ -54,20 +54,6 @@ pipeline {
                 }
             }
         }
-        stage('Creating new service') {
-            steps {
-                script {
-                    sh '''
-                        aws ecs create-service \
-                        --cluster spring-cluster \
-                        --service-name spring-service-1 \
-                        --task-definition ${TASK_DEFN_FAMILY} \
-                        --desired-count 2 \
-                        --launch-type EC2 \
-                        --region us-east-1
-                    '''
-                }
-            }
-        }
+        
     }
 }
