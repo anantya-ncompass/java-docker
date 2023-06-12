@@ -1,12 +1,8 @@
-version: 0.0
-os: linux
-files:
-  - source: ./
-    destination: /home/ec2-user/spring
-hooks:
-  BeforeInstall:
-    - location: ./start.sh
-      runas: root
-  AfterInstall:
-    - location: ./stop.sh
-      runas: root
+Resources:
+  - TargetService:
+      Type: AWS::ECS::Service
+      Properties:
+        TaskDefinition: "arn:aws:ecs:us-east-1:368355641188:task-definition/spring-task-ec2:revision"
+        LoadBalancerInfo:
+          ContainerName: "spring-container"
+          ContainerPort: 8080
