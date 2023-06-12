@@ -54,19 +54,7 @@ pipeline {
                 }
             }
         }
-        stage('Updating existing service') {
-    steps {
-        script {
-            sh '''
-                aws ecs update-service \
-                --cluster spring-cluster \
-                --service spring-service \
-                --task-definition ${TASK_DEFN_FAMILY}:${TASK_DEFN_REVISION} \
-                --region us-east-1
-            '''
-        }
-    }
-}
+      
 
     }
 }
