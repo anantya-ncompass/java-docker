@@ -2,7 +2,7 @@ Resources:
   - TargetService:
       Type: AWS::ECS::Service
       Properties:
-        TaskDefinition: "arn:aws:ecs:us-east-1:368355641188:task-definition/spring-task-ec2:10"
+        TaskDefinition: "arn:aws:ecs:region:account_id:task-definition/task_defn:revision"
         LoadBalancerInfo:
-          ContainerName: "spring-container"
+          ContainerName: "container_name
           ContainerPort: 8080
