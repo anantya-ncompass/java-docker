@@ -1,3 +1,16 @@
+version: 0.0
+os: linux
+files:
+  - source: ./
+    destination: /home/ec2-user/spring
+hooks:
+  BeforeInstall:
+    - location: ./start.sh
+      runas: root
+  AfterInstall:
+    - location: ./stop.sh
+      runas: root
+
 Resources:
   - TargetService:
       Type: AWS::ECS::Service
