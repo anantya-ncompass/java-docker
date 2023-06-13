@@ -4,5 +4,5 @@ Resources:
       Properties:
         TaskDefinition: "arn:aws:ecs:region:account_id:task-definition/task_defn:revision"
         LoadBalancerInfo:
-          ContainerName: "container_name
+          ContainerName: "container_name"
           ContainerPort: 8080
