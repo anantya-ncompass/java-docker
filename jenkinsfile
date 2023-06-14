@@ -3,10 +3,10 @@ pipeline {
     environment {
         AWS_ACCOUNT_ID = "368355641188"
         AWS_DEFAULT_REGION = "us-east-1"
-        IMAGE_REPO_NAME = "spring-app"
+        IMAGE_REPO_NAME = "spring-app-2"
         IMAGE_TAG = "${env.BUILD_NUMBER}"
         REPOSITORY_URI = "${AWS_ACCOUNT_ID}.dkr.ecr.${AWS_DEFAULT_REGION}.amazonaws.com/${IMAGE_REPO_NAME}"
-        TASK_DEFN_FAMILY = "spring-task-ec2"
+        TASK_DEFN_FAMILY = "spring-task-2"
     }
 
     stages {
@@ -19,7 +19,7 @@ pipeline {
         }
         stage('Cloning Git') {
             steps {
-                checkout scmGit(branches: [[name: '*/docker-ecs']], extensions: [], userRemoteConfigs: [[url: 'https://github.com/anantya-ncompass/java-docker.git']])
+                checkout scmGit(branches: [[name: '*/updated-app']], extensions: [], userRemoteConfigs: [[url: 'https://github.com/anantya-ncompass/java-docker.git']])
             }
         }
         stage('Building Image') {
