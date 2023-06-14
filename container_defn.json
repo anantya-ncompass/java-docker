@@ -1,5 +1,5 @@
 {
-  "family": "spring-task-ec2",
+  "family": "spring-task-2",
   "networkMode": "bridge",
   "executionRoleArn": "arn:aws:iam::368355641188:role/ecsTaskExecutionRole",
   "containerDefinitions": [
