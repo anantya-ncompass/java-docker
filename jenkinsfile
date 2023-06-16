@@ -37,15 +37,6 @@ pipeline {
                 }
             }
         }
-        stage('changing tag value in container_defn.json') {
-            steps {
-                script {
-                    sh '''
-                    sed -i "s/tag_value/${BUILD_NUMBER}/g" ./container_defn.json
-                    '''
-                }
-            }
-        }
         stage('Creating new task definition') {
             steps {
                 script {
