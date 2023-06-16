@@ -4,7 +4,7 @@ pipeline {
         AWS_ACCOUNT_ID = "368355641188"
         AWS_DEFAULT_REGION = "us-east-1"
         IMAGE_REPO_NAME = "spring-app"
-        IMAGE_TAG = "latest}"
+        IMAGE_TAG = "latest"
         REPOSITORY_URI = "${AWS_ACCOUNT_ID}.dkr.ecr.${AWS_DEFAULT_REGION}.amazonaws.com/${IMAGE_REPO_NAME}"
         TASK_DEFN_FAMILY = "spring-task-ec2"
     }
